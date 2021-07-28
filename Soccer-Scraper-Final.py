@@ -21,7 +21,10 @@ home = soup.find('td', class_="match-row__team-home")
 
 away = soup.find('td', class_="match-row__team-away")
 
-for match,home,away in zip(soup.find_all('span', class_='match-row__date'),soup.find_all('td', class_="match-row__team-away"),soup.find_all('td', class_="match-row__team-home")):
+for match,home,away in zip(
+    soup.find_all('span', class_='match-row__date'),
+    soup.find_all('td', class_="match-row__team-away"),
+    soup.find_all('td', class_="match-row__team-home")):
     print(competition.text + " " + match.text,home.text,'VS',away.text)
 
 
